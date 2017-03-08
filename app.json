@@ -13,13 +13,3 @@
         "ON_HEROKU": "true",
         "FORCE_SSL": "true",
         "INVITATION_CODE": {
-            "generator": "secret"
-        },
-        "USE_GRAPHVIZ_DOT": "dot"
-    },
-    "scripts": {
-      "postdeploy": "bundle exec rake db:migrate"
-    },
-    "addons": ["heroku-postgresql"],
-    "success_url": "/users/sign_up"
-}
