@@ -6,10 +6,4 @@
     "logo": "https://raw.githubusercontent.com/cantino/huginn/master/media/huginn-icon-64.png",
     "env": {
         "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-multi.git",
-        "APP_SECRET_TOKEN": {
-            "generator": "secret"
-        },
-        "PROCFILE_PATH": "deployment/heroku/Procfile.heroku",
-        "ON_HEROKU": "true",
-        "FORCE_SSL": "true",
-        "INVITATION_CODE": {
+        "APP_SECRET_TOKEN": {"
