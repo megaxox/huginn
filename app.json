@@ -6,4 +6,18 @@
     "logo": "https://raw.githubusercontent.com/cantino/huginn/master/media/huginn-icon-64.png",
     "env": {
         "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-multi.git",
-        "APP_SECRET_TOKEN": {"
+        "APP_SECRET_TOKEN": {
+            "generator": "secret"
+        },
+        "PROCFILE_PATH": "deployment/heroku/Procfile.heroku",
+        "ON_HEROKU": "true",
+        "FORCE_SSL": "true",
+        "INVITATION_CODE": "huginn",
+        "USE_GRAPHVIZ_DOT": "dot"
+    },
+    "scripts": {
+      "postdeploy": "bundle exec rake db:migrate"
+    },
+    "addons": ["heroku-postgresql"],
+    "success_url": "/users/sign_up"
+}
